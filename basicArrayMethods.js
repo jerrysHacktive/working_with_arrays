@@ -10,81 +10,82 @@ fruits.forEach((fruit, index) => {
 
 // 1) SHOPPING CART: Iterate over a shopping cart array and calculate the total cost of all items
 // initializes an array of cart that contains objects with a name and a price
-// const cart = [
-//   { name: "name 1", price: 10.99 },
-//   { name: "name 2", price: 5.99 },
-//   { name: "name 3", price: 7.99 },
-// ];
+const cart = [
+  { name: "name 1", price: 10.99 },
+  { name: "name 2", price: 5.99 },
+  { name: "name 3", price: 7.99 },
+];
 
 // this total variable is initialized to 0, which will be used to store the total cost of items in the cart
-// let total = 0;
+ let total = 0;
 //this iterates over each element in the cart array,takes a parameter of the current element in the array(item)
-// cart.forEach((item) => {
+ cart.forEach((item) => {
 //   // this adds the price of the current item to the total variable and the += operator is used to accumulate the prices of all items
-//   total += item.price;
-// });
-// console.log(` Total: $${total.toFixed(2)}`);
+  total += item.price;
+ });
+ console.log(` Total: $${total.toFixed(2)}`);
 
 // // 2) USER MANAGEMENT
 // //Iterate over an array of users and perform actions such as sending emails or updating users data
-// const users = [
-//   { name: "jerry", email: "bowoto47@gmail.com" },
-//   { name: "tope", email: "vazzle333@gmail.com" },
-//   { name: "austine", email: "devygramm@gmail.com" },
-// ];
+const users = [
+  { name: "jerry", email: "bowoto47@gmail.com" },
+  { name: "tope", email: "vazzle333@gmail.com" },
+  { name: "austine", email: "devygramm@gmail.com" },
+];
 
-// users.forEach((user) => {
+users.forEach((user) => {
 //   // send email to each user
-//   console.log(`sending email to ${user.email}`);
-// });
+  console.log(`sending email to ${user.email}`);
+});
 
-// users.forEach((user) => 
-//   // send email to each user
+//  users.forEach((user) => 
+// //   // send email to each user
 //   console.log(`sending email to ${user.email}`)
-// );
+//  );
+
 // B) MAP METHOD: returns a new array
 //allows you to create a new array method by transforming each element in an exisiting array, so it iterates over each element in an array , applies a specified function to each element , returns a new array containing the transformed element
 //REAL WORLD IMPLEMENTATION
 
 // 1)   array of objects representing employees and i want to extract their names and format them in uppercase, transforming data
-// const employeees = [
-//   { id: 1, name: "jerry" },
-//   { id: 2, name: "tope" },
-//   { id: 3, name: "austine" },
-// ];
+const employeees = [
+  { id: 1, name: "jerry" },
+  { id: 2, name: "tope" },
+  { id: 3, name: "austine" },
+];
 
-// const formattedEmployeesName = employees.map((employee) =>
-//   employee.name.toLocaleUpperCase()
-// );
-// console.log(formattedEmployeesName);
+const formattedEmployeesName = employees.map((employee) =>
+  employee.name.toLocaleUpperCase()
+);
+console.log(formattedEmployeesName);
 
 // //2) extracting specific data from users array
-// const Users = [
-//   { id: 1, name: "jerry", email: "bowoto1@gmail.com" },
-//   { id: 2, name: "tope", email: "bowoto2@gmail.com" },
-//   { id: 3, name: "austine", email: "bowoto3@gmail.com" },
-// ];
+const Users = [
+  { id: 1, name: "jerry", email: "bowoto1@gmail.com" },
+  { id: 2, name: "tope", email: "bowoto2@gmail.com" },
+  { id: 3, name: "austine", email: "bowoto3@gmail.com" },
+];
 
-// const userEmails = users.map((user) => user.email);
-// console.log(userEmails);
+const userEmails = users.map((user) => user.email);
+console.log(userEmails);
 
 // // 3) calculating totals
-// const orders = [
-//   { id: 1, total: 100 },
-//   { id: 2, total: 200 },
-//   { id: 1, total: 300 },
-// ];
+const orders = [
+  { id: 1, total: 100 },
+  { id: 2, total: 200 },
+  { id: 1, total: 300 },
+];
 
-// const totalOrders = orders.map((order) => order.total * 0.9);// calculating orders with 10% discount
-// console.log(totalOrders);
+const totalOrders = orders.map((order) => order.total * 0.9);// calculating orders with 10% discount
+console.log(totalOrders);
 
 // //4)data formatting
-// const dates = [ '2025-08-24', '2024-09-23'];
-// const formattedDates = dates.map((date) => {
-//   const [ year, month, day ] = date.split( '-');
-//   return `${month}/${day}/${year}`;
-// })
-// console.log(formattedDates);
+const dates = [ '2025-08-24', '2024-09-23'];
+const formattedDates = dates.map((date) => {
+  const [ year, month, day ] = date.split( '-');
+  return `${month}/${day}/${year}`;
+})
+console.log(formattedDates);
 
 
 //C) FILTER METHOD : returns a new array, filter out irrelevant data from a dataset
